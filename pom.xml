@@ -11,6 +11,7 @@
     <properties>
         <java.version>1.8</java.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <protoc.home>C:\Users\YK\Desktop\dev\protoc-3.11.3-win64</protoc.home>
     </properties>
 
     <dependencies>
@@ -53,22 +54,26 @@
                 </configuration>
             </plugin>
             <plugin>
-                <groupId>org.xolstice.maven.plugins</groupId>
-                <artifactId>protobuf-maven-plugin</artifactId>
-                <version>0.5.0</version>
-                <extensions>true</extensions>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>exec-maven-plugin</artifactId>
+                <version>1.6.0</version>
                 <executions>
                     <execution>
+                        <phase>generate-sources</phase>
                         <goals>
-                            <goal>compile</goal>
-                            <goal>test-compile</goal>
+                            <goal>exec</goal>
                         </goals>
-                        <configuration>
-                            <protocArtifact>com.google.protobuf:protoc:2.6.1:exe:${os.detected.classifier}
-                            </protocArtifact>
-                        </configuration>
                     </execution>
                 </executions>
+                <configuration>
+                    <executable>${protoc.home}/bin/protoc</executable>
+                    <workingDirectory>${project.basedir}</workingDirectory>
+                    <arguments>
+                        <argument>-I=src/main/proto</argument>
+                        <argument>--java_out=src/main/java</argument>
+                        <argument>addressbook.proto</argument>
+                    </arguments>
+                </configuration>
             </plugin>
         </plugins>
     </build>

@@ -2930,17 +2930,17 @@ public final class AddressBookMessage {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n\014person.proto\022\030net.youngrok.gist.protos" +
-      "\"\373\001\n\006Person\022\014\n\004name\030\001 \002(\t\022\n\n\002id\030\002 \002(\005\022\r\n" +
-      "\005email\030\003 \001(\t\022<\n\006phones\030\004 \003(\0132,.net.young" +
-      "rok.gist.protos.Person.PhoneNumber\032]\n\013Ph" +
-      "oneNumber\022\016\n\006number\030\001 \002(\t\022>\n\004type\030\002 \001(\0162" +
-      "*.net.youngrok.gist.protos.Person.PhoneT" +
-      "ype:\004HOME\"+\n\tPhoneType\022\n\n\006MOBILE\020\000\022\010\n\004HO" +
-      "ME\020\001\022\010\n\004WORK\020\002\"?\n\013AddressBook\0220\n\006people\030" +
-      "\001 \003(\0132 .net.youngrok.gist.protos.PersonB" +
-      ".\n\030net.youngrok.gist.protosB\022AddressBook" +
-      "Message"
+      "\n\021addressbook.proto\022\030net.youngrok.gist.p" +
+      "rotos\"\373\001\n\006Person\022\014\n\004name\030\001 \002(\t\022\n\n\002id\030\002 \002" +
+      "(\005\022\r\n\005email\030\003 \001(\t\022<\n\006phones\030\004 \003(\0132,.net." +
+      "youngrok.gist.protos.Person.PhoneNumber\032" +
+      "]\n\013PhoneNumber\022\016\n\006number\030\001 \002(\t\022>\n\004type\030\002" +
+      " \001(\0162*.net.youngrok.gist.protos.Person.P" +
+      "honeType:\004HOME\"+\n\tPhoneType\022\n\n\006MOBILE\020\000\022" +
+      "\010\n\004HOME\020\001\022\010\n\004WORK\020\002\"?\n\013AddressBook\0220\n\006pe" +
+      "ople\030\001 \003(\0132 .net.youngrok.gist.protos.Pe" +
+      "rsonB.\n\030net.youngrok.gist.protosB\022Addres" +
+      "sBookMessage"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
