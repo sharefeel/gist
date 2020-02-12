@@ -1,8 +1,5 @@
 package net.youngrok.gist;
 
-import net.youngrok.gist.protos.AddressBookMessage.*;
-import net.youngrok.gist.protos.AddressBookMessage.Person.PhoneNumber;
-import net.youngrok.gist.protos.AddressBookMessage.Person.PhoneType;
 import org.junit.Test;
 
 import java.io.*;
